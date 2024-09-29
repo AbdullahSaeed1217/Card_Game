@@ -1,0 +1,10 @@
+version: '3'
+services:
+  card-game:
+    build: .
+    ports:
+      - '3000:80'
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
